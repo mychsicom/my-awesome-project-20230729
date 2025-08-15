@@ -13,21 +13,41 @@ body {
 
 /* 顶部栏 */
 .header-bar {
+  position: relative; /* 给绝对定位的箭头提供定位参照 */
   height: 44px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* 中间文字居中 */
   padding: 0 12px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   font-size: 18px;
   font-weight: 500;
 }
-.back,
-.close {
-  font-size: 20px;
-  color: #333;
+
+.back {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
 }
+
+.icon-back {
+  width: 20px;  /* 箭头大小 */
+  height: 20px;
+  stroke: #333; /* 箭头颜色 */
+  stroke-width: 1.8; /* 线条粗细，可改成1.5更细 */
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.back:active .icon-back {
+  opacity: 0.6; /* 点击反馈 */
+}
+
 
 /* Banner */
 .banner img {
@@ -38,7 +58,7 @@ body {
 /* 主卡片 */
 .card {
   margin: 12px;
-  background: linear-gradient(135deg, rgb(40, 178, 133) 0%, rgba(40, 178, 88, 0.82) 100%);
+  background: linear-gradient(135deg, rgb(34, 178, 129) 0%, rgb(62, 201, 146) 100%);
   border-radius: 12px;
   padding: 16px;
   color: #fff;
@@ -100,7 +120,7 @@ body {
 }
 .badge {
   background: #00000033; /* 修改为浅绿色背景 */
-  color: #fff; /* 设置文字颜色为白色，以确保对比度 */
+  color: #f0fff9;/* 设置文字颜色为白色，以确保对比度 */
   padding: 3px 9px;
   border-radius: 13px;
   font-size: 13px;
@@ -110,12 +130,14 @@ body {
 .major {
   margin-top: 6px;
   font-size: 14px;
+  color: #f0fff9;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
 }
 .sep {
+  color: #f0fff9;
   margin: 0 4px;
 }
 
@@ -149,15 +171,15 @@ body {
 
 /* 底部按钮 */
 .footer {
-  padding: 12px;
+  padding: 14px;
 }
 .report-btn {
   width: 100%;
-  height: 44px;
-  background: #28b285;
+  height: 48px;
+  background: #26b887;
   color: #fff;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
 }
