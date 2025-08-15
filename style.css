@@ -50,6 +50,9 @@ body {
 
 
 /* Banner */
+.banner {
+  margin: 0 12px; /* 与card的左右margin一致 */
+}
 .banner img {
   width: 100%;
   display: block;
